@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.3.xsd
+       http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.3.xsd
+       http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.3.xsd">
+    
+<bean id="userValidator" class="com.me.validator.UserProfileValidator" />
+<bean id="activityValidator" class="com.me.validator.UserActivityValidator" />
+<bean id="userProfileValidator" class="com.me.validator.UserProfileUpdateValidator" />
+<bean id="loginValidator" class="com.me.validator.UserLoginValidator" />
+<bean id="userDAO" class="com.me.dao.UserProfileDAO" />
+<bean id="friendDAO" class="com.me.dao.FriendProfileDAO" />
+<bean id="friendRequestDAO" class="com.me.dao.FriendRequestProfileDAO" />
+<bean id="postDAO" class="com.me.dao.PostProfileDAO" />
+<bean id="commentDAO" class="com.me.dao.CommentProfileDAO" />
+<bean id="timelineDAO" class="com.me.dao.TimelineProfileDAO" />
+<bean id="notificationDAO" class="com.me.dao.NotificationProfileDAO" />
+<bean id="messageDAO" class="com.me.dao.MessageProfileDAO" />
+<bean id="reportDAO" class="com.me.dao.ReportDAO" />
+<bean id="userCountryDAO" class="com.me.dao.UserCountryDAO" />
+<bean id="uploadFile" class="com.me.imageprocessor.UploadFile" />
+<bean id="userController" class="com.me.controller.UserProfileUpdateController" />
+
+<bean id="encoder" class="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder"/> 
+<!--bean id="propertyConfigurer"
+    class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer"
+    p:location="/WEB-INF/jdbc.properties" />
+
+<bean id="dataSource"
+    class="org.springframework.jdbc.datasource.DriverManagerDataSource"
+    p:driverClassName="${jdbc.driverClassName}"
+    p:url="${jdbc.url}"
+    p:username="${jdbc.username}"
+    p:password="${jdbc.password}" /-->
+
+
+    <!-- ADD PERSISTENCE SUPPORT HERE (jpa, hibernate, etc) -->
+</beans>

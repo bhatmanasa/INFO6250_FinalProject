@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<hibernate-mapping>
+    <class name="com.me.pojo.FriendProfile" table="friend_profile">
+        <id name="id" column="Id" type="int">
+            <generator class="native" />
+        </id>
+                <property name="user1" column="User1" type="int" />
+        <property name="user2" column="User2" type="int" />
+    </class>
+</hibernate-mapping>

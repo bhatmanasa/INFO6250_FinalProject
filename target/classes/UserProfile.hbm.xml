@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<hibernate-mapping>
+    <class name="com.me.pojo.UserProfile" table="user_profile_table">
+        <id name="userId" column="UserId" type="int">
+            <generator class="native" />
+        </id>
+                <property name="email" column="Email" type="string" />
+        <property name="password" column="UserPassword" type="string" />
+        <property name="role" column="UserRole" type="string" />
+        <property name="firstName" column="FirstName" type="string" />
+        <property name="lastName" column="LastName" type="string" />
+         <property name="dob" column="DOB" type="string" />
+        <property name="dobAccess" column="DOBAccess" type="string" />
+        <property name="gender" column="Gender" type="string" />
+        <property name="genderAccess" column="GenderAccess" type="string" />
+        <property name="contact" column="Contact" type="string" />
+        <property name="contactAccess" column="ContactAccess" type="string" />
+        <property name="photoAccess" column="PhotoAccess" type="string" />
+        <property name="photo" column="Photo" type="string" />
+        <property name="country" column="Country" type="string" />
+        <property name="state" column="State" type="string" />
+        <property name="friendList" column="FriendList" type="string" />
+        <property name="friendAccess" column="FriendAccess" type="string" />
+        <property name="friendRequests" column="FriendRequests" type="string" />
+    </class>
+        <class name="com.me.pojo.FriendProfile" table="friend_profile">
+        <id name="id" column="Id" type="int">
+            <generator class="native" />
+        </id>
+                <property name="user1" column="User1" type="int" />
+        <property name="user2" column="User2" type="int" />
+    </class>
+</hibernate-mapping>
