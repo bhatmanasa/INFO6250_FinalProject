@@ -7,6 +7,7 @@ It has the ideal features of social networking site like registering to user acc
 
 It has been developed using Spring MVC , Interceptors for validation, Hibernate, Entity DAO design, MySQL and Java concepts.
 
+# Demo
 ![WeConnect Demo](WeConnectDemo.gif)
 
 # How to Run
